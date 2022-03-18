@@ -103,7 +103,7 @@ analytics:
 # Site Author
 author:
   name             : "Teresa Huang"
-  avatar           : #"teresahuangs.github.io/profile.png"
+  avatar           : "teresahuangs.github.io/profile.png"
   bio              : "Caltech Computer Science and Business, Economics, and Management"
   location         : "San Francisco Bay Area"
   email            :
