@@ -12,7 +12,7 @@
 
 theme                    : "minimal-mistakes-jekyll"
 #remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "sunrise" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "aqua" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -103,10 +103,10 @@ analytics:
 # Site Author
 author:
   name             : "Teresa Huang"
-  avatar           : "profile.png"
+  avatar           : 
   bio              : "Caltech Computer Science and Business, Economics, and Management"
   location         : "San Francisco Bay Area"
-  email            :
+  email            : "thhuang@caltech.edu"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -125,7 +125,7 @@ author:
       # url: "https://github.com/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://www.instagram.com/teresahuangs/"
 
 # Site Footer
 footer:
@@ -147,7 +147,7 @@ footer:
       # url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url:
+      url: "https://www.instagram.com/teresahuangs/"
 
 
 # Reading Files
