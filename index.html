@@ -11,56 +11,68 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://teresahuangs.github.io/">
 <link rel="canonical" href="https://teresahuangs.github.io/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%231E3DB8'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Helvetica,Arial,sans-serif' font-size='15' font-weight='700' fill='white'%3ETH%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 30V16a14 14 0 0 1 28 0v14z' fill='%23C8102E'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23F4B9C8'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,500;0,600;1,400&display=swap">
 <style>
   :root {
-    --paper: #F4F5F8;
-    --paper-2: #EBEDF2;
-    --ink: #151A24;
-    --ink-2: #333A47;
-    --muted: #5C6575;
-    --rule: #D9DDE5;
-    --accent: #1E3DB8;
-    --accent-ink: #162E8E;
-    --accent-soft: #E0E6F8;
-    --node: #1E3DB8;
-    --edge: #1E3DB8;
-    --shadow: 0 1px 2px rgba(21, 26, 36, .06), 0 8px 24px rgba(21, 26, 36, .06);
+    --bone: #F7F1E8;
+    --bone-2: #FFFBF6;
+    --ink: #2B221E;
+    --ink-2: #4E423B;
+    --muted: #7D6E64;
+    --rule: #E4D9CD;
+    --cherry: #C8102E;
+    --cherry-ink: #A80D27;
+    --pink: #F4B9C8;
+    --pink-soft: #FADDE4;
+    --blue: #A9CCE4;
+    --blue-soft: #D5E6F1;
+    --tan: #D9A264;
+    --spot: #4A2A15;
+    --on-cherry: #FFF4F1;
+    --shadow: 0 1px 2px rgba(43, 34, 30, .05), 0 10px 30px rgba(43, 34, 30, .07);
     color-scheme: light;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --paper: #0E1218;
-      --paper-2: #151A22;
-      --ink: #E9ECF1;
-      --ink-2: #C9CED8;
-      --muted: #98A1B0;
-      --rule: #272D38;
-      --accent: #8AA0FF;
-      --accent-ink: #A9B8FF;
-      --accent-soft: #1A2342;
-      --node: #8AA0FF;
-      --edge: #8AA0FF;
-      --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .35);
+      --bone: #1F1815;
+      --bone-2: #2A211D;
+      --ink: #F4ECE3;
+      --ink-2: #D9CDC2;
+      --muted: #A89A8E;
+      --rule: #3B302A;
+      --cherry: #E9475F;
+      --cherry-ink: #F07086;
+      --pink: #E4A3B5;
+      --pink-soft: #4A2E37;
+      --blue: #9EC3DE;
+      --blue-soft: #28394A;
+      --tan: #C8914F;
+      --spot: #2E1A0C;
+      --on-cherry: #FFF4F1;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 30px rgba(0, 0, 0, .35);
       color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
-    --paper: #0E1218;
-    --paper-2: #151A22;
-    --ink: #E9ECF1;
-    --ink-2: #C9CED8;
-    --muted: #98A1B0;
-    --rule: #272D38;
-    --accent: #8AA0FF;
-    --accent-ink: #A9B8FF;
-    --accent-soft: #1A2342;
-    --node: #8AA0FF;
-    --edge: #8AA0FF;
-    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .35);
+    --bone: #1F1815;
+    --bone-2: #2A211D;
+    --ink: #F4ECE3;
+    --ink-2: #D9CDC2;
+    --muted: #A89A8E;
+    --rule: #3B302A;
+    --cherry: #E9475F;
+    --cherry-ink: #F07086;
+    --pink: #E4A3B5;
+    --pink-soft: #4A2E37;
+    --blue: #9EC3DE;
+    --blue-soft: #28394A;
+    --tan: #C8914F;
+    --spot: #2E1A0C;
+    --on-cherry: #FFF4F1;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 30px rgba(0, 0, 0, .35);
     color-scheme: dark;
   }
 
@@ -70,182 +82,170 @@
 
   body {
     margin: 0;
-    background: var(--paper);
+    background: var(--bone);
     color: var(--ink);
-    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-family: "Nunito", "Helvetica Neue", Arial, sans-serif;
     font-size: 17px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
   }
-  a { color: var(--accent); text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent); text-underline-offset: 3px; }
-  a:hover { text-decoration-color: var(--accent); }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  a { color: var(--cherry); text-decoration-color: color-mix(in srgb, var(--cherry) 35%, transparent); text-underline-offset: 3px; }
+  a:hover { text-decoration-color: var(--cherry); }
+  a:focus-visible { outline: 2px solid var(--cherry); outline-offset: 3px; border-radius: 3px; }
 
-  .mono {
-    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-    font-size: 12px;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    color: var(--muted);
+  .display { font-family: "Jost", "Futura", "Century Gothic", sans-serif; font-weight: 600; letter-spacing: -.01em; line-height: 1.05; text-wrap: balance; }
+  .eyebrow {
+    font-family: "Jost", "Futura", sans-serif; font-weight: 500;
+    font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted);
+    display: inline-flex; align-items: center; gap: 10px;
   }
-  .display {
-    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
-    font-variation-settings: "wdth" 112;
-    font-weight: 700;
-    letter-spacing: -.02em;
-    line-height: 1.05;
-    text-wrap: balance;
-  }
+  .eyebrow::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--cherry); flex: none; }
+  .eyebrow.blue::before { background: var(--blue); }
+  .eyebrow.pink::before { background: var(--pink); }
+  .eyebrow.plain::before { display: none; }
 
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
 
   /* ---------- header ---------- */
   header.top {
     position: sticky; top: 0; z-index: 10;
-    background: color-mix(in srgb, var(--paper) 88%, transparent);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: color-mix(in srgb, var(--bone) 86%, transparent);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--rule);
   }
-  header.top .wrap {
-    display: flex; align-items: center; justify-content: space-between;
-    height: 56px; gap: 24px;
-  }
-  .brand {
-    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
-    font-variation-settings: "wdth" 112;
-    font-weight: 700; font-size: 15px; letter-spacing: -.01em;
-    color: var(--ink); text-decoration: none;
-  }
-  nav.links { display: flex; gap: 22px; }
-  nav.links a {
-    font-family: "JetBrains Mono", ui-monospace, monospace;
-    font-size: 12px; letter-spacing: .06em; text-transform: uppercase;
-    color: var(--muted); text-decoration: none;
-  }
-  nav.links a:hover { color: var(--ink); }
+  header.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 24px; }
+  .brand { font-family: "Jost", sans-serif; font-weight: 600; font-size: 17px; color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
+  .brand i { width: 18px; height: 18px; border-radius: 9px 9px 2px 2px; background: var(--cherry); display: inline-block; }
+  nav.links { display: flex; gap: 26px; }
+  nav.links a { font-family: "Jost", sans-serif; font-weight: 500; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); text-decoration: none; }
+  nav.links a:hover { color: var(--cherry); }
 
   /* ---------- hero ---------- */
-  .hero { position: relative; padding: 72px 0 56px; border-bottom: 1px solid var(--rule); overflow: hidden; }
-  .hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 40px; align-items: start; }
-  .hero h1 { font-size: clamp(44px, 7.2vw, 88px); margin: 0 0 20px; }
-  .hero h1 .last { color: var(--accent); }
-  .hero .thesis {
-    font-size: clamp(20px, 2.3vw, 26px); line-height: 1.35; max-width: 20em;
-    margin: 0 0 22px; color: var(--ink); font-weight: 400; text-wrap: balance;
-  }
-  .hero .meta { margin: 0 0 32px; color: var(--muted); font-size: 16px; max-width: 32em; }
-  .hero .meta b { color: var(--ink-2); font-weight: 500; }
-  .graph { width: 300px; height: 300px; display: block; justify-self: end; }
-  .graph canvas { width: 100%; height: 100%; display: block; }
+  .hero { padding: 72px 0 64px; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 48px; align-items: center; }
+  .hero h1 { font-size: clamp(48px, 7.6vw, 96px); margin: 0 0 18px; font-weight: 600; }
+  .hero h1 .last { color: var(--cherry); }
+  .hero .thesis { font-family: "Jost", sans-serif; font-weight: 400; font-size: clamp(21px, 2.4vw, 28px); line-height: 1.3; max-width: 19em; margin: 0 0 20px; color: var(--ink); text-wrap: balance; }
+  .hero .meta { margin: 0 0 34px; color: var(--muted); font-size: 16.5px; max-width: 34em; }
+  .hero .meta b { color: var(--ink-2); font-weight: 600; }
 
-  .proof {
-    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
-    border: 1px solid var(--rule); border-radius: 6px; overflow: hidden;
-    background: var(--paper-2);
+  /* composition: leopard arch + pastel discs */
+  .comp { position: relative; width: 360px; height: 420px; justify-self: end; }
+  .arch {
+    position: absolute; left: 50px; top: 0; width: 260px; height: 400px;
+    border-radius: 130px 130px 14px 14px; overflow: hidden; background: var(--tan);
+    box-shadow: var(--shadow);
   }
-  .proof > div { padding: 18px 20px; border-left: 1px solid var(--rule); }
-  .proof > div:first-child { border-left: 0; }
-  .proof .n {
-    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
-    font-variation-settings: "wdth" 100; font-weight: 700;
-    font-size: 34px; letter-spacing: -.03em; line-height: 1;
-    color: var(--accent); font-variant-numeric: tabular-nums;
-    margin-bottom: 8px;
-  }
+  .arch canvas { width: 100%; height: 100%; display: block; }
+  .disc { position: absolute; border-radius: 50%; }
+  .disc.blue { width: 150px; height: 150px; left: 0; bottom: 20px; background: var(--blue); }
+  .disc.pink { width: 92px; height: 92px; right: 0; top: 60px; background: var(--pink); }
+  .disc.cherry { width: 34px; height: 34px; right: 34px; top: 190px; background: var(--cherry); }
+
+  .proof { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .proof > div { padding: 20px 20px 22px; border-radius: 18px; }
+  .proof > div:nth-child(1) { background: var(--blue-soft); }
+  .proof > div:nth-child(2) { background: var(--pink-soft); }
+  .proof > div:nth-child(3) { background: var(--cherry); color: var(--on-cherry); }
+  .proof .n { font-family: "Jost", sans-serif; font-weight: 600; font-size: 38px; letter-spacing: -.02em; line-height: 1; margin-bottom: 8px; font-variant-numeric: tabular-nums; color: var(--ink); }
+  .proof > div:nth-child(3) .n { color: var(--on-cherry); }
   .proof .l { font-size: 14px; line-height: 1.4; color: var(--ink-2); }
+  .proof > div:nth-child(3) .l { color: var(--on-cherry); opacity: .92; }
 
-  /* ---------- dossier sections ---------- */
-  section.row { padding: 56px 0; border-bottom: 1px solid var(--rule); }
-  section.row .wrap { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 36px; }
-  section.row .label { position: sticky; top: 76px; align-self: start; }
-  section.row .label .mono { display: block; margin-bottom: 6px; }
-  section.row .label .sub { font-size: 14px; color: var(--muted); line-height: 1.45; max-width: 16em; }
+  /* ---------- sections ---------- */
+  section.row { padding: 64px 0; border-top: 1px solid var(--rule); }
+  section.row .wrap { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 40px; }
+  section.row .label { position: sticky; top: 84px; align-self: start; }
+  section.row .label .eyebrow { margin-bottom: 8px; }
+  section.row .label .sub { font-size: 14.5px; color: var(--muted); line-height: 1.45; max-width: 17em; }
   .body { max-width: 680px; }
   .body p { margin: 0 0 1em; }
   .body p:last-child { margin-bottom: 0; }
-  .lede { font-size: 19px; line-height: 1.55; color: var(--ink); }
+  .lede { font-family: "Jost", sans-serif; font-weight: 400; font-size: 22px; line-height: 1.4; color: var(--ink); }
 
   /* work */
-  .work { list-style: none; margin: 0; padding: 0; display: grid; gap: 28px; }
-  .work > li {
-    display: grid; grid-template-columns: minmax(0, 1fr);
-    gap: 10px; padding: 26px 26px 28px;
-    background: var(--paper-2); border: 1px solid var(--rule); border-radius: 8px;
-  }
-  .work .kicker { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-  .work h3 { margin: 2px 0 6px; font-size: 24px; }
-  .work .para { max-width: 62ch; color: var(--ink-2); }
-  .work .facts {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 12px 20px; margin-top: 10px; padding-top: 16px; border-top: 1px dashed var(--rule);
-  }
-  .work .facts .n {
-    font-family: "Archivo", sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -.02em;
-    color: var(--accent); line-height: 1.1; font-variant-numeric: tabular-nums;
-  }
-  .work .facts .l { font-size: 13px; color: var(--muted); line-height: 1.35; margin-top: 2px; }
+  .work { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; }
+  .work > li { position: relative; padding: 28px 30px 30px 30px; background: var(--bone-2); border-radius: 22px; box-shadow: var(--shadow); overflow: hidden; }
+  .work > li::before { content: ""; position: absolute; right: -40px; top: -40px; width: 140px; height: 140px; border-radius: 50%; opacity: .9; }
+  .work > li:nth-child(1)::before { background: var(--blue-soft); }
+  .work > li:nth-child(2)::before { background: var(--pink-soft); }
+  .work > li:nth-child(3)::before { background: var(--blue-soft); }
+  .work .kicker { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; position: relative; }
+  .work h3 { margin: 10px 0 8px; font-size: 27px; position: relative; }
+  .work .para { max-width: 62ch; color: var(--ink-2); position: relative; }
+  .work .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px 20px; margin-top: 14px; padding-top: 18px; border-top: 1px solid var(--rule); }
+  .work .facts .n { font-family: "Jost", sans-serif; font-weight: 600; font-size: 26px; letter-spacing: -.02em; color: var(--cherry); line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .work .facts .l { font-size: 13.5px; color: var(--muted); line-height: 1.35; margin-top: 3px; }
 
   /* experience */
   .xp { list-style: none; margin: 0; padding: 0; }
-  .xp li {
-    display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 20px;
-    padding: 18px 0; border-top: 1px solid var(--rule);
-  }
+  .xp li { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 20px; padding: 18px 0; border-top: 1px solid var(--rule); }
   .xp li:first-child { border-top: 0; padding-top: 0; }
-  .xp .when { font-variant-numeric: tabular-nums; padding-top: 5px; }
-  .xp .role { font-weight: 600; font-size: 17px; color: var(--ink); }
+  .xp .when { font-family: "Jost", sans-serif; font-weight: 500; font-size: 14px; letter-spacing: .06em; color: var(--cherry); padding-top: 4px; font-variant-numeric: tabular-nums; }
+  .xp .role { font-family: "Jost", sans-serif; font-weight: 600; font-size: 19px; color: var(--ink); }
   .xp .org { color: var(--muted); }
   .xp .what { margin: 4px 0 0; color: var(--ink-2); font-size: 16px; max-width: 58ch; }
-  .xp .tag {
-    display: inline-block; margin-left: 8px; padding: 1px 7px; border-radius: 3px;
-    background: var(--accent-soft); color: var(--accent-ink);
-    font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .06em; text-transform: uppercase;
-    vertical-align: middle;
-  }
+  .xp .tag { display: inline-block; margin-left: 10px; padding: 2px 10px; border-radius: 999px; background: var(--pink-soft); color: var(--ink); font-family: "Jost", sans-serif; font-size: 11px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; vertical-align: middle; }
 
   /* education */
   .edu { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-  .edu li { padding: 20px 22px; border: 1px solid var(--rule); border-radius: 8px; }
-  .edu .school { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -.01em; margin: 6px 0 4px; }
-  .edu .deg { color: var(--ink-2); }
-  .edu .note { color: var(--muted); font-size: 14px; margin-top: 10px; line-height: 1.5; }
+  .edu li { padding: 26px 26px 24px; border-radius: 22px; }
+  .edu li:nth-child(1) { background: var(--blue-soft); }
+  .edu li:nth-child(2) { background: var(--pink-soft); }
+  .edu .school { font-family: "Jost", sans-serif; font-weight: 600; font-size: 24px; margin: 10px 0 4px; }
+  .edu .deg { color: var(--ink-2); font-weight: 500; }
+  .edu .note { color: var(--muted); font-size: 14.5px; margin-top: 10px; line-height: 1.5; }
+
+
+  /* places */
+  .places { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  .places li { border-radius: 22px; overflow: hidden; background: var(--bone-2); box-shadow: var(--shadow); display: grid; grid-template-rows: auto auto; }
+  .places svg { width: 100%; height: auto; display: block; }
+  .places .cap { padding: 12px 16px 14px; }
+  .places .city { font-family: "Jost", sans-serif; font-weight: 600; font-size: 17px; }
+  .places .why { color: var(--muted); font-size: 13.5px; line-height: 1.4; }
+  @media (max-width: 900px) { .places { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
   /* toolkit */
-  .kit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-  .kit h4 { margin: 0 0 8px; font-family: "Archivo", sans-serif; font-size: 15px; font-weight: 700; }
-  .kit ul { list-style: none; margin: 0; padding: 0; color: var(--ink-2); font-size: 15px; line-height: 1.7; }
+  .kit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+  .kit h4 { margin: 0 0 10px; font-family: "Jost", sans-serif; font-size: 16px; font-weight: 600; display: flex; align-items: center; gap: 10px; }
+  .kit h4::before { content: ""; width: 14px; height: 14px; border-radius: 7px 7px 2px 2px; flex: none; }
+  .kit > div:nth-child(1) h4::before { background: var(--cherry); }
+  .kit > div:nth-child(2) h4::before { background: var(--blue); }
+  .kit > div:nth-child(3) h4::before { background: var(--pink); }
+  .kit ul { list-style: none; margin: 0; padding: 0; color: var(--ink-2); font-size: 15.5px; line-height: 1.75; }
 
   /* contact */
-  .contact { display: grid; gap: 10px; }
-  .contact a {
-    display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 16px; align-items: baseline;
-    padding: 14px 0; border-top: 1px solid var(--rule); text-decoration: none; color: var(--ink);
-  }
+  .contact { display: grid; gap: 0; }
+  .contact a { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 16px; align-items: baseline; padding: 16px 0; border-top: 1px solid var(--rule); text-decoration: none; color: var(--ink); }
   .contact a:first-child { border-top: 0; padding-top: 0; }
-  .contact a span.v { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 18px; letter-spacing: -.01em; }
-  .contact a:hover span.v { color: var(--accent); }
+  .contact a .v { font-family: "Jost", sans-serif; font-weight: 500; font-size: 22px; }
+  .contact a:hover .v { color: var(--cherry); }
 
-  footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; }
-  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  footer { padding: 36px 0 56px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--rule); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center; }
+  footer .dots { display: inline-flex; gap: 6px; }
+  footer .dots i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
 
   /* ---------- responsive ---------- */
-  @media (max-width: 860px) {
+  @media (max-width: 900px) {
     .hero .wrap { grid-template-columns: 1fr; }
-    .graph { width: 200px; height: 200px; justify-self: start; order: -1; }
-    section.row .wrap { grid-template-columns: 1fr; gap: 18px; }
+    .comp { width: 240px; height: 280px; justify-self: start; order: -1; }
+    .arch { left: 34px; width: 172px; height: 266px; border-radius: 86px 86px 10px 10px; }
+    .disc.blue { width: 100px; height: 100px; bottom: 10px; }
+    .disc.pink { width: 60px; height: 60px; top: 40px; }
+    .disc.cherry { width: 24px; height: 24px; right: 22px; top: 126px; }
+    section.row .wrap { grid-template-columns: 1fr; gap: 20px; }
     section.row .label { position: static; }
     .kit { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 600px) {
     body { font-size: 16px; }
     .wrap { padding: 0 20px; }
+    nav.links { gap: 16px; }
     nav.links a:not(:last-child) { display: none; }
-    .hero { padding: 48px 0 40px; }
+    .hero { padding: 44px 0 44px; }
     .proof { grid-template-columns: 1fr; }
-    .proof > div { border-left: 0; border-top: 1px solid var(--rule); }
-    .proof > div:first-child { border-top: 0; }
     .xp li { grid-template-columns: 1fr; gap: 4px; }
     .edu { grid-template-columns: 1fr; }
     .kit { grid-template-columns: 1fr; }
@@ -257,11 +257,12 @@
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top">Teresa Huang</a>
+    <a class="brand" href="#top"><i aria-hidden="true"></i>Teresa Huang</a>
     <nav class="links" aria-label="Sections">
       <a href="#work">Work</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
+      <a href="#places">Places</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -294,14 +295,19 @@
           </div>
         </div>
       </div>
-      <div class="graph" aria-hidden="true"><canvas id="kg"></canvas></div>
+      <div class="comp" aria-hidden="true">
+        <div class="disc blue"></div>
+        <div class="arch"><canvas id="leopard"></canvas></div>
+        <div class="disc pink"></div>
+        <div class="disc cherry"></div>
+      </div>
     </div>
   </section>
 
   <section class="row" id="about" aria-labelledby="about-h">
     <div class="wrap">
       <div class="label">
-        <span class="mono" id="about-h">About</span>
+        <span class="eyebrow" id="about-h">About</span>
         <div class="sub">Engineer first, product manager by choice.</div>
       </div>
       <div class="body">
@@ -314,14 +320,14 @@
   <section class="row" id="work" aria-labelledby="work-h">
     <div class="wrap">
       <div class="label">
-        <span class="mono" id="work-h">Selected work</span>
+        <span class="eyebrow blue" id="work-h">Selected work</span>
         <div class="sub">What I owned, what I found, and what changed.</div>
       </div>
-      <div class="body" style="max-width:760px">
+      <div class="body" style="max-width:780px">
         <ol class="work">
           <li>
-            <div class="kicker"><span class="mono">DataVisor · 2025 to present</span><span class="mono">Product owner</span></div>
-            <h3 class="display" style="font-variation-settings:'wdth' 105">AI Agents for rules and features</h3>
+            <div class="kicker"><span class="eyebrow plain">DataVisor · 2025 to present</span><span class="eyebrow plain">Product owner</span></div>
+            <h3 class="display">AI Agents for rules and features</h3>
             <p class="para">DataVisor is a fraud and anti-money-laundering platform. Client transactions flow through a rules and features engine, and flagged activity lands with analysts as alerts. Writing those rules was technical enough that strategy work got deferred to support teams or the client’s engineers. My product metrics dashboards showed most support tickets pointed at that one surface, and exit interviews from churned clients named usability and onboarding time directly.</p>
             <p class="para">We tried the obvious fixes first: UX firms, rebuilt documentation, more support hires, professional services. Direct observation showed the real bottleneck was translating intent into executable logic, and users were already doing that in outside LLMs. I owned the agent product from diagnosis through launch, letting clients express a strategy in natural language while keeping the platform’s full flexibility.</p>
             <div class="facts">
@@ -331,8 +337,8 @@
             </div>
           </li>
           <li>
-            <div class="kicker"><span class="mono">DataVisor · 2025</span><span class="mono">Process and instrumentation</span></div>
-            <h3 class="display" style="font-variation-settings:'wdth' 105">Product metrics framework and release process</h3>
+            <div class="kicker"><span class="eyebrow plain">DataVisor · 2025</span><span class="eyebrow plain">Process and instrumentation</span></div>
+            <h3 class="display">Product metrics framework and release process</h3>
             <p class="para">Built the product metrics collection framework and dashboards with engineering, so decisions like the one above had evidence behind them. Separately, drove and implemented new processes for major and minor releases. The release change alone cut release bugs by more than half.</p>
             <div class="facts">
               <div><div class="n">54%</div><div class="l">fewer release bugs</div></div>
@@ -340,8 +346,8 @@
             </div>
           </li>
           <li>
-            <div class="kicker"><span class="mono">LearnSuite · 2024</span><span class="mono">Co-founder</span></div>
-            <h3 class="display" style="font-variation-settings:'wdth' 105">LearnSuite</h3>
+            <div class="kicker"><span class="eyebrow plain">LearnSuite · 2024</span><span class="eyebrow plain">Co-founder</span></div>
+            <h3 class="display">LearnSuite</h3>
             <p class="para">Scheduling, automated payments, and AI agents for administrative questions, built for tutoring centers, after-school programs, and private schools. Acquired multiple customers on a subscription with consistent revenue.</p>
           </li>
         </ol>
@@ -352,13 +358,13 @@
   <section class="row" id="experience" aria-labelledby="xp-h">
     <div class="wrap">
       <div class="label">
-        <span class="mono" id="xp-h">Experience</span>
+        <span class="eyebrow pink" id="xp-h">Experience</span>
         <div class="sub">Product since 2024. Engineering before that.</div>
       </div>
       <div class="body">
         <ul class="xp">
           <li>
-            <div class="when mono">2025 → now</div>
+            <div class="when">2025 – NOW</div>
             <div>
               <div class="role">Product Manager <span class="tag">Product</span></div>
               <div class="org">DataVisor · Mountain View, CA</div>
@@ -366,7 +372,7 @@
             </div>
           </li>
           <li>
-            <div class="when mono">2024</div>
+            <div class="when">2024</div>
             <div>
               <div class="role">Co-Founder and Product Manager <span class="tag">Product</span></div>
               <div class="org">LearnSuite · Remote</div>
@@ -374,7 +380,7 @@
             </div>
           </li>
           <li>
-            <div class="when mono">2023</div>
+            <div class="when">2023</div>
             <div>
               <div class="role">Software Engineering Intern</div>
               <div class="org">Cisco · San Jose, CA</div>
@@ -382,7 +388,7 @@
             </div>
           </li>
           <li>
-            <div class="when mono">2023</div>
+            <div class="when">2023</div>
             <div>
               <div class="role">Software Engineering Intern</div>
               <div class="org">Groove · Remote</div>
@@ -390,7 +396,7 @@
             </div>
           </li>
           <li>
-            <div class="when mono">2022</div>
+            <div class="when">2022</div>
             <div>
               <div class="role">Software Engineering Intern</div>
               <div class="org">Maxar Technologies · Remote</div>
@@ -398,7 +404,7 @@
             </div>
           </li>
           <li>
-            <div class="when mono">2021</div>
+            <div class="when">2021</div>
             <div>
               <div class="role">Software Engineering and ML Researcher</div>
               <div class="org">IPAC / NASA · Pasadena, CA</div>
@@ -406,7 +412,7 @@
             </div>
           </li>
           <li>
-            <div class="when mono">2019 → 2020</div>
+            <div class="when">2019 – 2020</div>
             <div>
               <div class="role">Software Engineering and ML Intern</div>
               <div class="org">Aktana · San Francisco, CA</div>
@@ -421,18 +427,18 @@
   <section class="row" id="education" aria-labelledby="edu-h">
     <div class="wrap">
       <div class="label">
-        <span class="mono" id="edu-h">Education</span>
+        <span class="eyebrow blue" id="edu-h">Education</span>
       </div>
-      <div class="body" style="max-width:760px">
+      <div class="body" style="max-width:780px">
         <ul class="edu">
           <li>
-            <span class="mono">2025</span>
+            <span class="eyebrow plain">2025</span>
             <div class="school">University of Oxford</div>
             <div class="deg">MSc, Advanced Computer Science</div>
             <div class="note">Concurrent algorithms, geometric deep learning, computer vision, uncertainty in deep learning.</div>
           </li>
           <li>
-            <span class="mono">2024</span>
+            <span class="eyebrow plain">2024</span>
             <div class="school">Caltech</div>
             <div class="deg">BS, Computer Science and Business &amp; Economics · 4.0 GPA</div>
             <div class="note">Operating systems, algorithms, machine learning, databases, software engineering, functional programming.</div>
@@ -442,13 +448,105 @@
     </div>
   </section>
 
+
+  <section class="row" id="places" aria-labelledby="places-h">
+    <div class="wrap">
+      <div class="label">
+        <span class="eyebrow" id="places-h">Places</span>
+        <div class="sub">Four cities that shaped how I think.</div>
+      </div>
+      <div class="body" style="max-width:780px">
+        <ul class="places">
+          <li>
+            <svg viewBox="0 0 200 140" role="img" aria-label="Los Angeles skyline with palm trees and hills">
+              <rect width="200" height="140" fill="var(--pink-soft)"/>
+              <circle cx="150" cy="44" r="18" fill="var(--cherry)"/>
+              <path d="M0 96 Q40 70 80 90 T160 84 T200 92 V140 H0Z" fill="var(--blue)"/>
+              <g fill="var(--ink)">
+                <rect x="98" y="72" width="10" height="36"/><rect x="110" y="62" width="8" height="46"/><rect x="120" y="78" width="12" height="30"/><rect x="134" y="70" width="7" height="38"/>
+                <rect x="28" y="60" width="3" height="60"/><rect x="58" y="50" width="3" height="70"/><rect x="172" y="68" width="3" height="52"/>
+                <path d="M29 62 c-14-10-22-6-26-2 c10-2 18 0 26 2z M29 62 c14-10 22-6 26-2 c-10-2-18 0-26 2z M29 62 c-4-14 2-22 8-24 c-4 8-6 16-8 24z M29 62 c4-14-2-22-8-24 c4 8 6 16 8 24z"/>
+                <path d="M59 52 c-14-10-22-6-26-2 c10-2 18 0 26 2z M59 52 c14-10 22-6 26-2 c-10-2-18 0-26 2z M59 52 c-4-14 2-22 8-24 c-4 8-6 16-8 24z M59 52 c4-14-2-22-8-24 c4 8 6 16 8 24z"/>
+                <path d="M173 70 c-14-10-22-6-26-2 c10-2 18 0 26 2z M173 70 c14-10 22-6 26-2 c-10-2-18 0-26 2z M173 70 c-4-14 2-22 8-24 c-4 8-6 16-8 24z M173 70 c4-14-2-22-8-24 c4 8 6 16 8 24z"/>
+                <rect x="0" y="118" width="200" height="22"/>
+              </g>
+            </svg>
+            <div class="cap"><div class="city">Los Angeles</div><div class="why">Caltech, Pasadena</div></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 200 140" role="img" aria-label="San Francisco skyline with the Golden Gate Bridge">
+              <rect width="200" height="140" fill="var(--blue-soft)"/>
+              <circle cx="46" cy="40" r="16" fill="var(--pink)"/>
+              <g fill="var(--ink)">
+                <path d="M118 112 L130 48 L142 112Z"/><rect x="146" y="70" width="12" height="42"/><rect x="160" y="80" width="18" height="32"/><rect x="104" y="84" width="10" height="28"/><rect x="180" y="88" width="14" height="24"/>
+              </g>
+              <g fill="var(--cherry)">
+                <rect x="30" y="52" width="6" height="60"/><rect x="86" y="52" width="6" height="60"/>
+                <rect x="26" y="62" width="14" height="4"/><rect x="82" y="62" width="14" height="4"/><rect x="26" y="78" width="14" height="4"/><rect x="82" y="78" width="14" height="4"/>
+                <rect x="0" y="96" width="200" height="5"/>
+              </g>
+              <path d="M0 62 Q33 52 33 52 Q61 92 89 52 Q89 52 122 62" fill="none" stroke="var(--cherry)" stroke-width="3"/>
+              <g stroke="var(--cherry)" stroke-width="1.5">
+                <line x1="45" y1="62" x2="45" y2="96"/><line x1="55" y1="68" x2="55" y2="96"/><line x1="61" y1="71" x2="61" y2="96"/><line x1="67" y1="68" x2="67" y2="96"/><line x1="77" y1="62" x2="77" y2="96"/>
+                <line x1="12" y1="58" x2="12" y2="96"/><line x1="21" y1="55" x2="21" y2="96"/><line x1="101" y1="55" x2="101" y2="96"/><line x1="110" y1="58" x2="110" y2="96"/>
+              </g>
+              <rect x="0" y="112" width="200" height="28" fill="var(--blue)"/>
+              <ellipse cx="60" cy="118" rx="70" ry="9" fill="var(--pink-soft)" opacity=".8"/>
+            </svg>
+            <div class="cap"><div class="city">San Francisco</div><div class="why">Now</div></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 200 140" role="img" aria-label="Cambridge with King's College Chapel and a punt on the river">
+              <rect width="200" height="140" fill="var(--blue-soft)"/>
+              <circle cx="40" cy="38" r="14" fill="var(--cherry)"/>
+              <g fill="var(--ink)">
+                <rect x="60" y="62" width="100" height="44"/>
+                <rect x="60" y="56" width="100" height="6"/>
+                <rect x="62" y="30" width="6" height="30"/><path d="M60 32 L65 14 L70 32Z"/>
+                <rect x="152" y="30" width="6" height="30"/><path d="M150 32 L155 14 L160 32Z"/>
+                <rect x="92" y="40" width="5" height="20"/><path d="M90 42 L94.5 26 L99 42Z"/>
+                <rect x="123" y="40" width="5" height="20"/><path d="M121 42 L125.5 26 L130 42Z"/>
+              </g>
+              <g fill="var(--blue-soft)">
+                <rect x="76" y="72" width="7" height="26" rx="3.5"/><rect x="90" y="72" width="7" height="26" rx="3.5"/><rect x="104" y="72" width="7" height="26" rx="3.5"/><rect x="118" y="72" width="7" height="26" rx="3.5"/><rect x="132" y="72" width="7" height="26" rx="3.5"/>
+              </g>
+              <rect x="0" y="106" width="200" height="34" fill="var(--blue)"/>
+              <path d="M20 118 Q50 128 80 118 L76 122 Q50 130 24 122Z" fill="var(--ink)"/>
+              <line x1="66" y1="94" x2="72" y2="122" stroke="var(--cherry)" stroke-width="2.5"/>
+              <circle cx="60" cy="112" r="4" fill="var(--pink)"/>
+            </svg>
+            <div class="cap"><div class="city">Cambridge, UK</div><div class="why">The Cam, the backs, the chapel</div></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 200 140" role="img" aria-label="Oxford with the Radcliffe Camera dome and spires">
+              <rect width="200" height="140" fill="var(--pink-soft)"/>
+              <circle cx="156" cy="36" r="16" fill="var(--blue)"/>
+              <g fill="var(--ink)">
+                <path d="M30 108 L36 70 L42 108Z"/><path d="M168 108 L174 62 L180 108Z"/><rect x="20" y="96" width="24" height="12"/><rect x="160" y="92" width="28" height="16"/>
+                <rect x="70" y="78" width="60" height="30"/>
+                <path d="M68 78 A32 32 0 0 1 132 78Z"/>
+                <rect x="97" y="34" width="6" height="16"/><circle cx="100" cy="32" r="3"/><rect x="92" y="48" width="16" height="6"/>
+                <rect x="62" y="104" width="76" height="4"/>
+              </g>
+              <g fill="var(--pink-soft)">
+                <rect x="78" y="84" width="6" height="18" rx="3"/><rect x="90" y="84" width="6" height="18" rx="3"/><rect x="104" y="84" width="6" height="18" rx="3"/><rect x="116" y="84" width="6" height="18" rx="3"/>
+              </g>
+              <rect x="0" y="108" width="200" height="32" fill="var(--cherry)"/>
+            </svg>
+            <div class="cap"><div class="city">Oxford, UK</div><div class="why">MSc, Advanced Computer Science</div></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section class="row" id="toolkit" aria-labelledby="kit-h">
     <div class="wrap">
       <div class="label">
-        <span class="mono" id="kit-h">Toolkit</span>
+        <span class="eyebrow pink" id="kit-h">Toolkit</span>
         <div class="sub">What I reach for.</div>
       </div>
-      <div class="body" style="max-width:760px">
+      <div class="body" style="max-width:780px">
         <div class="kit">
           <div>
             <h4>Product</h4>
@@ -467,17 +565,17 @@
     </div>
   </section>
 
-  <section class="row" id="contact" aria-labelledby="contact-h" style="border-bottom:0">
+  <section class="row" id="contact" aria-labelledby="contact-h">
     <div class="wrap">
       <div class="label">
-        <span class="mono" id="contact-h">Contact</span>
+        <span class="eyebrow" id="contact-h">Contact</span>
         <div class="sub">Open to product roles in the Bay Area, New York, and Los Angeles.</div>
       </div>
       <div class="body">
         <div class="contact">
-          <a href="mailto:theteresahuang@gmail.com"><span class="mono">Email</span><span class="v">theteresahuang@gmail.com</span></a>
-          <a href="https://linkedin.com/in/teresa-huang-05aba2177" target="_blank" rel="noopener"><span class="mono">LinkedIn</span><span class="v">teresa-huang-05aba2177</span></a>
-          <a href="https://github.com/teresahuangs" target="_blank" rel="noopener"><span class="mono">GitHub</span><span class="v">teresahuangs</span></a>
+          <a href="mailto:theteresahuang@gmail.com"><span class="eyebrow plain">Email</span><span class="v">theteresahuang@gmail.com</span></a>
+          <a href="https://linkedin.com/in/teresa-huang-05aba2177" target="_blank" rel="noopener"><span class="eyebrow plain">LinkedIn</span><span class="v">teresa-huang-05aba2177</span></a>
+          <a href="https://github.com/teresahuangs" target="_blank" rel="noopener"><span class="eyebrow plain">GitHub</span><span class="v">teresahuangs</span></a>
         </div>
       </div>
     </div>
@@ -488,85 +586,77 @@
 <footer>
   <div class="wrap">
     <span>© 2026 Teresa Huang</span>
+    <span class="dots" aria-hidden="true"><i style="background:var(--pink)"></i><i style="background:var(--blue)"></i><i style="background:var(--cherry)"></i><i style="background:var(--tan)"></i></span>
     <span>Hand-built, hosted on GitHub Pages.</span>
   </div>
 </footer>
 
 <script>
 (function () {
-  // Small knowledge-graph motif: nodes drift gently, edges connect neighbors.
-  var cv = document.getElementById('kg');
+  // Procedural leopard: tan ground, broken dark rosettes with a warmer core.
+  var cv = document.getElementById('leopard');
   if (!cv) return;
   var ctx = cv.getContext('2d');
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var css = getComputedStyle(document.documentElement);
-  var N = 16, nodes = [], W, H, dpr;
 
-  function colors() {
-    css = getComputedStyle(document.documentElement);
-    return { node: css.getPropertyValue('--node').trim(), edge: css.getPropertyValue('--edge').trim() };
-  }
-  function size() {
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
-    W = cv.clientWidth; H = cv.clientHeight;
+  function color(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+
+  // Deterministic pseudo-random so the pattern is the same on every load.
+  var seed = 20260428;
+  function rnd() { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; }
+
+  function paint() {
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var W = cv.clientWidth, H = cv.clientHeight;
+    if (!W || !H) return;
     cv.width = W * dpr; cv.height = H * dpr;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  }
-  function seed() {
-    nodes = [];
-    for (var i = 0; i < N; i++) {
-      nodes.push({
-        x: 30 + Math.random() * (W - 60),
-        y: 30 + Math.random() * (H - 60),
-        vx: (Math.random() - .5) * .25,
-        vy: (Math.random() - .5) * .25,
-        r: i === 0 ? 5 : 2 + Math.random() * 2
-      });
-    }
-  }
-  function draw() {
-    var c = colors();
-    ctx.clearRect(0, 0, W, H);
-    ctx.lineWidth = 1;
-    for (var i = 0; i < N; i++) {
-      for (var j = i + 1; j < N; j++) {
-        var dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y;
-        var d = Math.sqrt(dx * dx + dy * dy);
-        if (d < 95) {
-          ctx.globalAlpha = (1 - d / 95) * .45;
-          ctx.strokeStyle = c.edge;
-          ctx.beginPath(); ctx.moveTo(nodes[i].x, nodes[i].y); ctx.lineTo(nodes[j].x, nodes[j].y); ctx.stroke();
+    seed = 20260428;
+
+    var tan = color('--tan'), spot = color('--spot');
+    ctx.fillStyle = tan; ctx.fillRect(0, 0, W, H);
+
+    // Soft warm core color between tan and spot.
+    var core = 'color-mix(in srgb, ' + tan + ' 55%, ' + spot + ')';
+
+    var cell = 34;
+    for (var gy = -1; gy < H / cell + 1; gy++) {
+      for (var gx = -1; gx < W / cell + 1; gx++) {
+        var x = gx * cell + cell / 2 + (rnd() - .5) * cell * .9 + (gy % 2 ? cell / 2 : 0);
+        var y = gy * cell + cell / 2 + (rnd() - .5) * cell * .9;
+        var r = 7 + rnd() * 7;
+        var squish = .75 + rnd() * .5;
+        var rot = rnd() * Math.PI;
+
+        ctx.save();
+        ctx.translate(x, y); ctx.rotate(rot); ctx.scale(1, squish);
+
+        // warm core
+        ctx.fillStyle = core;
+        ctx.beginPath(); ctx.arc(0, 0, r * .62, 0, Math.PI * 2); ctx.fill();
+
+        // broken ring of 2 to 4 arcs
+        ctx.strokeStyle = spot; ctx.lineCap = 'round';
+        var arcs = 2 + Math.floor(rnd() * 3);
+        var a = rnd() * Math.PI * 2;
+        for (var k = 0; k < arcs; k++) {
+          var len = .6 + rnd() * 1.3;
+          ctx.lineWidth = 3.5 + rnd() * 3;
+          ctx.beginPath(); ctx.arc(0, 0, r, a, a + len); ctx.stroke();
+          a += len + .35 + rnd() * .8;
         }
-      }
-    }
-    ctx.globalAlpha = 1;
-    for (var k = 0; k < N; k++) {
-      var n = nodes[k];
-      ctx.fillStyle = c.node;
-      ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2); ctx.fill();
-      if (k === 0) {
-        ctx.globalAlpha = .25;
-        ctx.beginPath(); ctx.arc(n.x, n.y, n.r + 6, 0, Math.PI * 2); ctx.fill();
-        ctx.globalAlpha = 1;
+        // occasional solid fleck between rosettes
+        if (rnd() < .3) {
+          ctx.fillStyle = spot;
+          ctx.beginPath(); ctx.ellipse(r * 1.6, r * (rnd() - .5) * 2, 3, 2, 0, 0, Math.PI * 2); ctx.fill();
+        }
+        ctx.restore();
       }
     }
   }
-  function step() {
-    for (var i = 0; i < N; i++) {
-      var n = nodes[i];
-      n.x += n.vx; n.y += n.vy;
-      if (n.x < 12 || n.x > W - 12) n.vx *= -1;
-      if (n.y < 12 || n.y > H - 12) n.vy *= -1;
-    }
-    draw();
-    requestAnimationFrame(step);
-  }
-  size(); seed(); draw();
-  if (!reduce) requestAnimationFrame(step);
-  window.addEventListener('resize', function () { size(); seed(); draw(); });
-  if (window.matchMedia) {
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', draw);
-  }
+
+  paint();
+  window.addEventListener('resize', paint);
+  if (window.matchMedia) window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', paint);
 })();
 </script>
 </body>
