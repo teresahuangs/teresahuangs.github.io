@@ -140,7 +140,7 @@
   .disc { position: absolute; border-radius: 50%; }
   .disc.blue { width: 150px; height: 150px; left: 0; bottom: 20px; background: var(--blue); }
   .disc.pink { width: 92px; height: 92px; right: 0; top: 60px; background: var(--pink); }
-  .disc.cherry { width: 34px; height: 34px; right: 34px; top: 190px; background: var(--cherry); }
+  .ball { position: absolute; width: 48px; height: 48px; right: 26px; top: 186px; }
 
 
   /* ---------- sections ---------- */
@@ -183,6 +183,11 @@
 
 
 
+  /* off the clock */
+  .court-card { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 22px; align-items: center; margin-bottom: 26px; padding: 18px; border-radius: 22px; background: var(--bone-2); box-shadow: var(--shadow); }
+  .court-card svg { width: 100%; height: auto; display: block; border-radius: 14px; }
+  .court-cap .album { margin-top: 4px; max-width: 28ch; }
+  @media (max-width: 600px) { .court-card { grid-template-columns: 1fr; } }
   /* music */
   .records { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
   .records li { display: grid; gap: 12px; }
@@ -222,7 +227,7 @@
     .arch { left: 34px; width: 172px; height: 266px; border-radius: 86px 86px 10px 10px; }
     .disc.blue { width: 100px; height: 100px; bottom: 10px; }
     .disc.pink { width: 60px; height: 60px; top: 40px; }
-    .disc.cherry { width: 24px; height: 24px; right: 22px; top: 126px; }
+    .ball { width: 32px; height: 32px; right: 18px; top: 122px; }
     section.row .wrap { grid-template-columns: 1fr; gap: 20px; }
     section.row .label { position: static; }
   }
@@ -269,7 +274,7 @@
         <div class="disc blue"></div>
         <div class="arch"><canvas id="leopard"></canvas></div>
         <div class="disc pink"></div>
-        <div class="disc cherry"></div>
+        <svg class="ball" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50" fill="var(--cherry)"/><path d="M14 18 C40 40 40 60 14 82 M86 18 C60 40 60 60 86 82" fill="none" stroke="var(--bone)" stroke-width="6" stroke-linecap="round"/></svg>
       </div>
     </div>
   </section>
@@ -282,7 +287,7 @@
       </div>
       <div class="body">
         <p class="lede">I like problems where the hard part is translating what a person means into something a system can run. That is most of product management, and most of engineering too.</p>
-        <p>I studied computer science and economics at Caltech, then went to Oxford for a master’s in computer science. Along the way I have been a researcher at NASA’s IPAC, an engineer at three companies, a co-founder, and now a product manager. I write my own SQL and read the code I am asking for.</p>
+        <p>I studied computer science and economics at Caltech, then went to Oxford for a master’s in computer science. Along the way I have been a researcher at NASA’s IPAC, an engineer at three companies, a co-founder, and now a product manager. I played college tennis at Caltech, which is where I learned to lose a point and reset before the next one. I write my own SQL and read the code I am asking for.</p>
       </div>
     </div>
   </section>
@@ -470,10 +475,28 @@
     <div class="wrap">
       <div class="label">
         <span class="eyebrow pink" id="music-h">Off the clock</span>
-        <div class="sub">Music I keep coming back to.</div>
+        <div class="sub">Tennis, and music I keep coming back to.</div>
       </div>
       <div class="body" style="max-width:780px">
-        <ul class="records">
+        <div class="court-card">
+          <svg viewBox="0 0 360 200" role="img" aria-label="Tennis court seen from above">
+            <rect width="360" height="200" rx="16" fill="var(--blue)"/>
+            <g fill="none" stroke="var(--bone-2)" stroke-width="3">
+              <rect x="40" y="30" width="280" height="140"/>
+              <line x1="40" y1="48" x2="320" y2="48"/><line x1="40" y1="152" x2="320" y2="152"/>
+              <line x1="104" y1="48" x2="104" y2="152"/><line x1="256" y1="48" x2="256" y2="152"/>
+              <line x1="104" y1="100" x2="256" y2="100"/>
+            </g>
+            <line x1="180" y1="22" x2="180" y2="178" stroke="var(--ink)" stroke-width="4" stroke-dasharray="3 4"/>
+            <circle cx="238" cy="78" r="9" fill="var(--cherry)"/><path d="M232 71 C238 76 238 80 232 85 M244 71 C238 76 238 80 244 85" fill="none" stroke="var(--bone)" stroke-width="1.6"/>
+            <circle cx="92" cy="128" r="14" fill="var(--pink)"/><rect x="90" y="140" width="4" height="18" rx="2" fill="var(--ink)"/>
+          </svg>
+          <div class="court-cap">
+            <div class="artist">College tennis</div>
+            <div class="album">Caltech. Four years of doubles, early mornings, and one more serve.</div>
+          </div>
+        </div>
+        <ul class="records" hidden>
           <li><div class="sleeve"><div class="vinyl"></div></div><div><div class="artist">Artist one</div><div class="album">Album or song</div></div></li>
           <li><div class="sleeve"><div class="vinyl"></div></div><div><div class="artist">Artist two</div><div class="album">Album or song</div></div></li>
           <li><div class="sleeve"><div class="vinyl"></div></div><div><div class="artist">Artist three</div><div class="album">Album or song</div></div></li>
