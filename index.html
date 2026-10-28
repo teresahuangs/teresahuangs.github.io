@@ -190,6 +190,7 @@
   @media (max-width: 600px) { .court-card { grid-template-columns: 1fr; } }
   /* music */
   .records { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .records[hidden] { display: none; }
   .records li { display: grid; gap: 12px; }
   .sleeve { position: relative; aspect-ratio: 1; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
   .sleeve::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,.18), rgba(0,0,0,0) 60%); }
