@@ -1,4 +1,573 @@
----
-layout: home
-author_profile: true
----
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teresa Huang</title>
+<meta name="description" content="Teresa Huang is a product manager building AI agents and knowledge graph products for fraud and risk teams. Caltech CS and Business & Economics, Oxford MSc Advanced Computer Science.">
+<meta name="author" content="Teresa Huang">
+<meta property="og:title" content="Teresa Huang">
+<meta property="og:description" content="Product manager building AI agents for fraud and risk teams. Former engineer. Caltech and Oxford.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://teresahuangs.github.io/">
+<link rel="canonical" href="https://teresahuangs.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%231E3DB8'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Helvetica,Arial,sans-serif' font-size='15' font-weight='700' fill='white'%3ETH%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --paper: #F4F5F8;
+    --paper-2: #EBEDF2;
+    --ink: #151A24;
+    --ink-2: #333A47;
+    --muted: #5C6575;
+    --rule: #D9DDE5;
+    --accent: #1E3DB8;
+    --accent-ink: #162E8E;
+    --accent-soft: #E0E6F8;
+    --node: #1E3DB8;
+    --edge: #1E3DB8;
+    --shadow: 0 1px 2px rgba(21, 26, 36, .06), 0 8px 24px rgba(21, 26, 36, .06);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0E1218;
+      --paper-2: #151A22;
+      --ink: #E9ECF1;
+      --ink-2: #C9CED8;
+      --muted: #98A1B0;
+      --rule: #272D38;
+      --accent: #8AA0FF;
+      --accent-ink: #A9B8FF;
+      --accent-soft: #1A2342;
+      --node: #8AA0FF;
+      --edge: #8AA0FF;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .35);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0E1218;
+    --paper-2: #151A22;
+    --ink: #E9ECF1;
+    --ink-2: #C9CED8;
+    --muted: #98A1B0;
+    --rule: #272D38;
+    --accent: #8AA0FF;
+    --accent-ink: #A9B8FF;
+    --accent-soft: #1A2342;
+    --node: #8AA0FF;
+    --edge: #8AA0FF;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .35);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: var(--accent); text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent); text-underline-offset: 3px; }
+  a:hover { text-decoration-color: var(--accent); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .mono {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .display {
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    font-variation-settings: "wdth" 112;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+
+  /* ---------- header ---------- */
+  header.top {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--rule);
+  }
+  header.top .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 56px; gap: 24px;
+  }
+  .brand {
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    font-variation-settings: "wdth" 112;
+    font-weight: 700; font-size: 15px; letter-spacing: -.01em;
+    color: var(--ink); text-decoration: none;
+  }
+  nav.links { display: flex; gap: 22px; }
+  nav.links a {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 12px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--muted); text-decoration: none;
+  }
+  nav.links a:hover { color: var(--ink); }
+
+  /* ---------- hero ---------- */
+  .hero { position: relative; padding: 72px 0 56px; border-bottom: 1px solid var(--rule); overflow: hidden; }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 40px; align-items: start; }
+  .hero h1 { font-size: clamp(44px, 7.2vw, 88px); margin: 0 0 20px; }
+  .hero h1 .last { color: var(--accent); }
+  .hero .thesis {
+    font-size: clamp(20px, 2.3vw, 26px); line-height: 1.35; max-width: 20em;
+    margin: 0 0 22px; color: var(--ink); font-weight: 400; text-wrap: balance;
+  }
+  .hero .meta { margin: 0 0 32px; color: var(--muted); font-size: 16px; max-width: 32em; }
+  .hero .meta b { color: var(--ink-2); font-weight: 500; }
+  .graph { width: 300px; height: 300px; display: block; justify-self: end; }
+  .graph canvas { width: 100%; height: 100%; display: block; }
+
+  .proof {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+    border: 1px solid var(--rule); border-radius: 6px; overflow: hidden;
+    background: var(--paper-2);
+  }
+  .proof > div { padding: 18px 20px; border-left: 1px solid var(--rule); }
+  .proof > div:first-child { border-left: 0; }
+  .proof .n {
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    font-variation-settings: "wdth" 100; font-weight: 700;
+    font-size: 34px; letter-spacing: -.03em; line-height: 1;
+    color: var(--accent); font-variant-numeric: tabular-nums;
+    margin-bottom: 8px;
+  }
+  .proof .l { font-size: 14px; line-height: 1.4; color: var(--ink-2); }
+
+  /* ---------- dossier sections ---------- */
+  section.row { padding: 56px 0; border-bottom: 1px solid var(--rule); }
+  section.row .wrap { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 36px; }
+  section.row .label { position: sticky; top: 76px; align-self: start; }
+  section.row .label .mono { display: block; margin-bottom: 6px; }
+  section.row .label .sub { font-size: 14px; color: var(--muted); line-height: 1.45; max-width: 16em; }
+  .body { max-width: 680px; }
+  .body p { margin: 0 0 1em; }
+  .body p:last-child { margin-bottom: 0; }
+  .lede { font-size: 19px; line-height: 1.55; color: var(--ink); }
+
+  /* work */
+  .work { list-style: none; margin: 0; padding: 0; display: grid; gap: 28px; }
+  .work > li {
+    display: grid; grid-template-columns: minmax(0, 1fr);
+    gap: 10px; padding: 26px 26px 28px;
+    background: var(--paper-2); border: 1px solid var(--rule); border-radius: 8px;
+  }
+  .work .kicker { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .work h3 { margin: 2px 0 6px; font-size: 24px; }
+  .work .para { max-width: 62ch; color: var(--ink-2); }
+  .work .facts {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px 20px; margin-top: 10px; padding-top: 16px; border-top: 1px dashed var(--rule);
+  }
+  .work .facts .n {
+    font-family: "Archivo", sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -.02em;
+    color: var(--accent); line-height: 1.1; font-variant-numeric: tabular-nums;
+  }
+  .work .facts .l { font-size: 13px; color: var(--muted); line-height: 1.35; margin-top: 2px; }
+
+  /* experience */
+  .xp { list-style: none; margin: 0; padding: 0; }
+  .xp li {
+    display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 20px;
+    padding: 18px 0; border-top: 1px solid var(--rule);
+  }
+  .xp li:first-child { border-top: 0; padding-top: 0; }
+  .xp .when { font-variant-numeric: tabular-nums; padding-top: 5px; }
+  .xp .role { font-weight: 600; font-size: 17px; color: var(--ink); }
+  .xp .org { color: var(--muted); }
+  .xp .what { margin: 4px 0 0; color: var(--ink-2); font-size: 16px; max-width: 58ch; }
+  .xp .tag {
+    display: inline-block; margin-left: 8px; padding: 1px 7px; border-radius: 3px;
+    background: var(--accent-soft); color: var(--accent-ink);
+    font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .06em; text-transform: uppercase;
+    vertical-align: middle;
+  }
+
+  /* education */
+  .edu { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .edu li { padding: 20px 22px; border: 1px solid var(--rule); border-radius: 8px; }
+  .edu .school { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -.01em; margin: 6px 0 4px; }
+  .edu .deg { color: var(--ink-2); }
+  .edu .note { color: var(--muted); font-size: 14px; margin-top: 10px; line-height: 1.5; }
+
+  /* toolkit */
+  .kit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+  .kit h4 { margin: 0 0 8px; font-family: "Archivo", sans-serif; font-size: 15px; font-weight: 700; }
+  .kit ul { list-style: none; margin: 0; padding: 0; color: var(--ink-2); font-size: 15px; line-height: 1.7; }
+
+  /* contact */
+  .contact { display: grid; gap: 10px; }
+  .contact a {
+    display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 16px; align-items: baseline;
+    padding: 14px 0; border-top: 1px solid var(--rule); text-decoration: none; color: var(--ink);
+  }
+  .contact a:first-child { border-top: 0; padding-top: 0; }
+  .contact a span.v { font-family: "Archivo", sans-serif; font-weight: 600; font-size: 18px; letter-spacing: -.01em; }
+  .contact a:hover span.v { color: var(--accent); }
+
+  footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 860px) {
+    .hero .wrap { grid-template-columns: 1fr; }
+    .graph { width: 200px; height: 200px; justify-self: start; order: -1; }
+    section.row .wrap { grid-template-columns: 1fr; gap: 18px; }
+    section.row .label { position: static; }
+    .kit { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .wrap { padding: 0 20px; }
+    nav.links a:not(:last-child) { display: none; }
+    .hero { padding: 48px 0 40px; }
+    .proof { grid-template-columns: 1fr; }
+    .proof > div { border-left: 0; border-top: 1px solid var(--rule); }
+    .proof > div:first-child { border-top: 0; }
+    .xp li { grid-template-columns: 1fr; gap: 4px; }
+    .edu { grid-template-columns: 1fr; }
+    .kit { grid-template-columns: 1fr; }
+    .contact a { grid-template-columns: 1fr; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Teresa Huang</a>
+    <nav class="links" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="name">
+    <div class="wrap">
+      <div>
+        <h1 id="name" class="display">Teresa <span class="last">Huang</span></h1>
+        <p class="thesis">Product manager building AI agents for fraud and risk teams.</p>
+        <p class="meta">
+          Currently at <b>DataVisor</b>, where I own the AI Agents and Knowledge Graph products.
+          Before product, I shipped code at Cisco, Groove, Maxar, and NASA’s IPAC.
+          Caltech BS, Oxford MSc. Based in the San Francisco Bay Area.
+        </p>
+        <div class="proof" role="list" aria-label="Selected outcomes">
+          <div role="listitem">
+            <div class="n">93%</div>
+            <div class="l">less time clients spend on analysis after adopting the AI Agent products</div>
+          </div>
+          <div role="listitem">
+            <div class="n">54%</div>
+            <div class="l">fewer release bugs after the release process I designed and rolled out</div>
+          </div>
+          <div role="listitem">
+            <div class="n">59.6%</div>
+            <div class="l">of support tickets traced to one surface, the finding behind the agents product</div>
+          </div>
+        </div>
+      </div>
+      <div class="graph" aria-hidden="true"><canvas id="kg"></canvas></div>
+    </div>
+  </section>
+
+  <section class="row" id="about" aria-labelledby="about-h">
+    <div class="wrap">
+      <div class="label">
+        <span class="mono" id="about-h">About</span>
+        <div class="sub">Engineer first, product manager by choice.</div>
+      </div>
+      <div class="body">
+        <p class="lede">I like problems where the hard part is translating what a person means into something a system can run. At DataVisor that meant watching fraud strategists draft detection logic in an external LLM and paste it back into our platform, and deciding the right product was an agent, not a redesign.</p>
+        <p>I write my own SQL, read the code I am asking for, and build the metrics that decide whether a feature worked. In 2024 I co-founded LearnSuite, a scheduling and payments product for tutoring centers that reached paying subscribers. Before that I spent four years as a software engineer and ML researcher across networking, geospatial imagery, and astronomy.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="row" id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="label">
+        <span class="mono" id="work-h">Selected work</span>
+        <div class="sub">What I owned, what I found, and what changed.</div>
+      </div>
+      <div class="body" style="max-width:760px">
+        <ol class="work">
+          <li>
+            <div class="kicker"><span class="mono">DataVisor · 2025 to present</span><span class="mono">Product owner</span></div>
+            <h3 class="display" style="font-variation-settings:'wdth' 105">AI Agents for rules and features</h3>
+            <p class="para">DataVisor is a fraud and anti-money-laundering platform. Client transactions flow through a rules and features engine, and flagged activity lands with analysts as alerts. Writing those rules was technical enough that strategy work got deferred to support teams or the client’s engineers. My product metrics dashboards showed most support tickets pointed at that one surface, and exit interviews from churned clients named usability and onboarding time directly.</p>
+            <p class="para">We tried the obvious fixes first: UX firms, rebuilt documentation, more support hires, professional services. Direct observation showed the real bottleneck was translating intent into executable logic, and users were already doing that in outside LLMs. I owned the agent product from diagnosis through launch, letting clients express a strategy in natural language while keeping the platform’s full flexibility.</p>
+            <div class="facts">
+              <div><div class="n">93%</div><div class="l">drop in client analysis time</div></div>
+              <div><div class="n">81%</div><div class="l">of platform tickets were solvable without engineering</div></div>
+              <div><div class="n">~$20M</div><div class="l">ARR across five churned clients who cited usability</div></div>
+            </div>
+          </li>
+          <li>
+            <div class="kicker"><span class="mono">DataVisor · 2025</span><span class="mono">Process and instrumentation</span></div>
+            <h3 class="display" style="font-variation-settings:'wdth' 105">Product metrics framework and release process</h3>
+            <p class="para">Built the product metrics collection framework and dashboards with engineering, so decisions like the one above had evidence behind them. Separately, drove and implemented new processes for major and minor releases. The release change alone cut release bugs by more than half.</p>
+            <div class="facts">
+              <div><div class="n">54%</div><div class="l">fewer release bugs</div></div>
+              <div><div class="n">2</div><div class="l">products owned end to end: AI Agents and Knowledge Graph</div></div>
+            </div>
+          </li>
+          <li>
+            <div class="kicker"><span class="mono">LearnSuite · 2024</span><span class="mono">Co-founder</span></div>
+            <h3 class="display" style="font-variation-settings:'wdth' 105">LearnSuite</h3>
+            <p class="para">Scheduling, automated payments, and AI agents for administrative questions, built for tutoring centers, after-school programs, and private schools. Acquired multiple customers on a subscription with consistent revenue.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="row" id="experience" aria-labelledby="xp-h">
+    <div class="wrap">
+      <div class="label">
+        <span class="mono" id="xp-h">Experience</span>
+        <div class="sub">Product since 2024. Engineering before that.</div>
+      </div>
+      <div class="body">
+        <ul class="xp">
+          <li>
+            <div class="when mono">2025 → now</div>
+            <div>
+              <div class="role">Product Manager <span class="tag">Product</span></div>
+              <div class="org">DataVisor · Mountain View, CA</div>
+              <p class="what">Own the AI Agents and Knowledge Graph products: roadmap, design, development, and release.</p>
+            </div>
+          </li>
+          <li>
+            <div class="when mono">2024</div>
+            <div>
+              <div class="role">Co-Founder and Product Manager <span class="tag">Product</span></div>
+              <div class="org">LearnSuite · Remote</div>
+              <p class="what">Founded and ran an EdTech scheduling and payments product with paying subscribers.</p>
+            </div>
+          </li>
+          <li>
+            <div class="when mono">2023</div>
+            <div>
+              <div class="role">Software Engineering Intern</div>
+              <div class="org">Cisco · San Jose, CA</div>
+              <p class="what">Designed and built the front end and the Spring Boot and MongoDB back end for a network topology health app in CX Cloud.</p>
+            </div>
+          </li>
+          <li>
+            <div class="when mono">2023</div>
+            <div>
+              <div class="role">Software Engineering Intern</div>
+              <div class="org">Groove · Remote</div>
+              <p class="what">Front-end engineer on the Chrome extension in React, with Ruby fixes on the back end.</p>
+            </div>
+          </li>
+          <li>
+            <div class="when mono">2022</div>
+            <div>
+              <div class="role">Software Engineering Intern</div>
+              <div class="org">Maxar Technologies · Remote</div>
+              <p class="what">Python inventory metrics for geospatial imagery and Grafana dashboards with Slack alerting for error and resource monitoring.</p>
+            </div>
+          </li>
+          <li>
+            <div class="when mono">2021</div>
+            <div>
+              <div class="role">Software Engineering and ML Researcher</div>
+              <div class="org">IPAC / NASA · Pasadena, CA</div>
+              <p class="what">Computer vision model that classifies stars and galaxies in Hubble Space Telescope images at 98.6% accuracy.</p>
+            </div>
+          </li>
+          <li>
+            <div class="when mono">2019 → 2020</div>
+            <div>
+              <div class="role">Software Engineering and ML Intern</div>
+              <div class="org">Aktana · San Francisco, CA</div>
+              <p class="what">Sales anomaly detection, named entity recognition with spaCy and BERT, and intent classification.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="row" id="education" aria-labelledby="edu-h">
+    <div class="wrap">
+      <div class="label">
+        <span class="mono" id="edu-h">Education</span>
+      </div>
+      <div class="body" style="max-width:760px">
+        <ul class="edu">
+          <li>
+            <span class="mono">2025</span>
+            <div class="school">University of Oxford</div>
+            <div class="deg">MSc, Advanced Computer Science</div>
+            <div class="note">Concurrent algorithms, geometric deep learning, computer vision, uncertainty in deep learning.</div>
+          </li>
+          <li>
+            <span class="mono">2024</span>
+            <div class="school">Caltech</div>
+            <div class="deg">BS, Computer Science and Business &amp; Economics · 4.0 GPA</div>
+            <div class="note">Operating systems, algorithms, machine learning, databases, software engineering, functional programming.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="row" id="toolkit" aria-labelledby="kit-h">
+    <div class="wrap">
+      <div class="label">
+        <span class="mono" id="kit-h">Toolkit</span>
+        <div class="sub">What I reach for.</div>
+      </div>
+      <div class="body" style="max-width:760px">
+        <div class="kit">
+          <div>
+            <h4>Product</h4>
+            <ul><li>Roadmaps and release process</li><li>Metrics frameworks and dashboards</li><li>Customer research and interviews</li><li>Agile, Jira, Confluence</li></ul>
+          </div>
+          <div>
+            <h4>Engineering</h4>
+            <ul><li>Python, Java, TypeScript, SQL</li><li>React, Spring Boot, Django</li><li>Postgres, MySQL, MongoDB</li><li>AWS, GCP, Docker</li></ul>
+          </div>
+          <div>
+            <h4>AI</h4>
+            <ul><li>Agent product design</li><li>Knowledge graphs</li><li>Claude, Gemini, Vertex</li><li>Computer vision and NLP</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row" id="contact" aria-labelledby="contact-h" style="border-bottom:0">
+    <div class="wrap">
+      <div class="label">
+        <span class="mono" id="contact-h">Contact</span>
+        <div class="sub">Open to product roles in the Bay Area, New York, and Los Angeles.</div>
+      </div>
+      <div class="body">
+        <div class="contact">
+          <a href="mailto:theteresahuang@gmail.com"><span class="mono">Email</span><span class="v">theteresahuang@gmail.com</span></a>
+          <a href="https://linkedin.com/in/teresa-huang-05aba2177" target="_blank" rel="noopener"><span class="mono">LinkedIn</span><span class="v">teresa-huang-05aba2177</span></a>
+          <a href="https://github.com/teresahuangs" target="_blank" rel="noopener"><span class="mono">GitHub</span><span class="v">teresahuangs</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Teresa Huang</span>
+    <span>Hand-built, hosted on GitHub Pages.</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Small knowledge-graph motif: nodes drift gently, edges connect neighbors.
+  var cv = document.getElementById('kg');
+  if (!cv) return;
+  var ctx = cv.getContext('2d');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var css = getComputedStyle(document.documentElement);
+  var N = 16, nodes = [], W, H, dpr;
+
+  function colors() {
+    css = getComputedStyle(document.documentElement);
+    return { node: css.getPropertyValue('--node').trim(), edge: css.getPropertyValue('--edge').trim() };
+  }
+  function size() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = cv.clientWidth; H = cv.clientHeight;
+    cv.width = W * dpr; cv.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function seed() {
+    nodes = [];
+    for (var i = 0; i < N; i++) {
+      nodes.push({
+        x: 30 + Math.random() * (W - 60),
+        y: 30 + Math.random() * (H - 60),
+        vx: (Math.random() - .5) * .25,
+        vy: (Math.random() - .5) * .25,
+        r: i === 0 ? 5 : 2 + Math.random() * 2
+      });
+    }
+  }
+  function draw() {
+    var c = colors();
+    ctx.clearRect(0, 0, W, H);
+    ctx.lineWidth = 1;
+    for (var i = 0; i < N; i++) {
+      for (var j = i + 1; j < N; j++) {
+        var dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y;
+        var d = Math.sqrt(dx * dx + dy * dy);
+        if (d < 95) {
+          ctx.globalAlpha = (1 - d / 95) * .45;
+          ctx.strokeStyle = c.edge;
+          ctx.beginPath(); ctx.moveTo(nodes[i].x, nodes[i].y); ctx.lineTo(nodes[j].x, nodes[j].y); ctx.stroke();
+        }
+      }
+    }
+    ctx.globalAlpha = 1;
+    for (var k = 0; k < N; k++) {
+      var n = nodes[k];
+      ctx.fillStyle = c.node;
+      ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2); ctx.fill();
+      if (k === 0) {
+        ctx.globalAlpha = .25;
+        ctx.beginPath(); ctx.arc(n.x, n.y, n.r + 6, 0, Math.PI * 2); ctx.fill();
+        ctx.globalAlpha = 1;
+      }
+    }
+  }
+  function step() {
+    for (var i = 0; i < N; i++) {
+      var n = nodes[i];
+      n.x += n.vx; n.y += n.vy;
+      if (n.x < 12 || n.x > W - 12) n.vx *= -1;
+      if (n.y < 12 || n.y > H - 12) n.vy *= -1;
+    }
+    draw();
+    requestAnimationFrame(step);
+  }
+  size(); seed(); draw();
+  if (!reduce) requestAnimationFrame(step);
+  window.addEventListener('resize', function () { size(); seed(); draw(); });
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', draw);
+  }
+})();
+</script>
+</body>
+</html>
