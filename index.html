@@ -182,6 +182,27 @@
   @media (max-width: 900px) { .places { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
 
+
+  /* music */
+  .records { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .records li { display: grid; gap: 12px; }
+  .sleeve { position: relative; aspect-ratio: 1; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
+  .sleeve::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,.18), rgba(0,0,0,0) 60%); }
+  .vinyl { position: absolute; width: 78%; height: 78%; right: -24%; top: 11%; border-radius: 50%; background: var(--ink); }
+  .vinyl::before { content: ""; position: absolute; inset: 7%; border-radius: 50%; border: 1px solid rgba(255,255,255,.12); box-shadow: inset 0 0 0 10px transparent, inset 0 0 0 11px rgba(255,255,255,.08), inset 0 0 0 22px transparent, inset 0 0 0 23px rgba(255,255,255,.08); }
+  .vinyl::after { content: ""; position: absolute; width: 34%; height: 34%; left: 33%; top: 33%; border-radius: 50%; background: var(--cherry); box-shadow: inset 0 0 0 4px var(--bone-2); }
+  .records li:nth-child(1) .sleeve { background: var(--blue); }
+  .records li:nth-child(2) .sleeve { background: var(--pink); }
+  .records li:nth-child(3) .sleeve { background: var(--cherry); }
+  .records li:nth-child(3) .vinyl::after { background: var(--pink); }
+  .records .artist { font-family: "Jost", sans-serif; font-weight: 600; font-size: 17px; line-height: 1.2; }
+  .records .album { color: var(--muted); font-size: 14px; }
+  .playlist { margin-top: 28px; border-radius: 16px; overflow: hidden; }
+  .playlist iframe { display: block; width: 100%; height: 152px; border: 0; }
+  .likes { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+  .likes li { font-family: "Jost", sans-serif; font-weight: 500; font-size: 14px; padding: 6px 14px; border-radius: 999px; background: var(--bone-2); box-shadow: var(--shadow); }
+  @media (max-width: 600px) { .records { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
   /* contact */
   .contact { display: grid; gap: 0; }
   .contact a { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 16px; align-items: baseline; padding: 16px 0; border-top: 1px solid var(--rule); text-decoration: none; color: var(--ink); }
@@ -226,6 +247,7 @@
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
       <a href="#places">Places</a>
+      <a href="#music">Music</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -442,6 +464,26 @@
     </div>
   </section>
 
+
+
+  <section class="row" id="music" aria-labelledby="music-h">
+    <div class="wrap">
+      <div class="label">
+        <span class="eyebrow pink" id="music-h">Off the clock</span>
+        <div class="sub">Music I keep coming back to.</div>
+      </div>
+      <div class="body" style="max-width:780px">
+        <ul class="records">
+          <li><div class="sleeve"><div class="vinyl"></div></div><div><div class="artist">Artist one</div><div class="album">Album or song</div></div></li>
+          <li><div class="sleeve"><div class="vinyl"></div></div><div><div class="artist">Artist two</div><div class="album">Album or song</div></div></li>
+          <li><div class="sleeve"><div class="vinyl"></div></div><div><div class="artist">Artist three</div><div class="album">Album or song</div></div></li>
+        </ul>
+        <!-- Playlist embed: paste a Spotify or Apple Music embed URL into src and remove the comment markers.
+        <div class="playlist"><iframe src="https://open.spotify.com/embed/playlist/PLAYLIST_ID" loading="lazy" allow="encrypted-media" title="Playlist"></iframe></div>
+        -->
+      </div>
+    </div>
+  </section>
 
   <section class="row" id="contact" aria-labelledby="contact-h">
     <div class="wrap">
